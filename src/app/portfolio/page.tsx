@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const projects = [
-  { id: 1, title: "Bag", image: "/bag.jpg" },
+  { id: 1, title: "Bag", image: "/Bag.jpg" },
   { id: 2, title: "Bunny", image: "/bunny.jpg" },
   { id: 3, title: "Green Bunny", image: "/green bunny.jpg" },
   // Add more images here as you add them to your public/portfolio folder
