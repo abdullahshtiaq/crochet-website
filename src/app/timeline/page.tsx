@@ -63,7 +63,7 @@ export default function TimelinePage() {
                 <div className={`md:flex md:items-center md:gap-10 ${left ? "" : "md:flex-row-reverse"}`}>
                   {/* Card (image + text) */}
                   <div className="md:w-1/2">
-                    <div className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-200 overflow-hidden">
+                    <div className="bg-white shadow-sm ring-1 ring-gray-200 overflow-hidden">
                       <Image
                         src={ev.image}
                         alt={ev.title}
