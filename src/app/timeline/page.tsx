@@ -48,9 +48,11 @@ export default function TimelinePage() {
 
         <div className="space-y-16">
           {events.map((ev, i) => {
-            const left = i % 2 === 0; // alternate
+            const left = i % 2 === 0;
+            // Add negative margin for all except the first point
+            const cardMargin = i === 0 ? "" : "md:-mt-24 -mt-12";
             return (
-              <div key={ev.id} className="relative">
+              <div key={ev.id} className={`relative ${cardMargin}`}>
                 {/* Mobile dot */}
                 <span className="md:hidden absolute left-6 top-4 -translate-x-1/2 w-3 h-3 rounded-full bg-[#5e88c3]" />
 
@@ -70,15 +72,13 @@ export default function TimelinePage() {
                         className="w-full h-64 md:h-72 object-cover"
                         priority={i === 0}
                       />
-                      <div className="p-5">
-                        <h3 className="text-xl font-semibold text-gray-900">{ev.title}</h3>
-                        {ev.theme && <p className="text-sm text-gray-600 mt-1">{ev.theme}</p>}
-                        <p className="text-[#5e88c3] font-medium mt-2">{ev.date}</p>
+                      <div className="p-5 bg-[#5e88c3]">
+                        <h3 className="text-xl font-semibold text-white">{ev.title}</h3>
+                        {ev.theme && <p className="text-sm text-white mt-1">{ev.theme}</p>}
+                        <p className="text-white font-medium mt-2">{ev.date}</p>
                       </div>
                     </div>
                   </div>
-
-                  {/* Spacer column on desktop so cards sit left/right of the line */}
                   <div className="hidden md:block md:w-1/2" />
                 </div>
               </div>
